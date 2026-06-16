@@ -1,0 +1,8 @@
+mlx-audio==0.4.3
+mlx
+fastapi
+uvicorn[standard]
+webrtcvad-wheels
+setuptools
+pydantic
+numpy

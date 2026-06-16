@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Launch Voxtral with verbose logging enabled, then tail both log files live.
+# Ctrl-C only stops the tail — Voxtral keeps running; use bin/voxquit to stop it.
+set -euo pipefail
+source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/_common.sh"
+
+export VOXTRAL_LOG=1
+
+: > /tmp/voxtral_app.log
+: > /tmp/voxtral_sidecar.log
+
+stop_voxtral
+start_voxtral
+
+echo "Tailing /tmp/voxtral_app.log and /tmp/voxtral_sidecar.log (Ctrl-C to stop tailing only)..."
+tail -f /tmp/voxtral_app.log /tmp/voxtral_sidecar.log

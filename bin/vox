@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Launch Voxtral (sidecar + app), quiet by default. See bin/voxlog for verbose logging.
+set -euo pipefail
+source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/_common.sh"
+
+stop_voxtral
+start_voxtral

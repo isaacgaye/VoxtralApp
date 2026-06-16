@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Build VoxtralApp.app to the fixed path bin/vox and bin/voxlog expect.
+set -euo pipefail
+source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/_common.sh"
+
+cd "$REPO_ROOT/VoxtralApp"
+xcodebuild -scheme VoxtralApp -configuration Debug \
+  CODE_SIGN_IDENTITY="-" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO \
+  -derivedDataPath ./build \
+  clean build

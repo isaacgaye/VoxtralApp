@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.voxtral.dictation.sidecar</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <!-- Replace with absolute path after running sidecar/setup.sh -->
+    <string>/REPLACE/WITH/ABSOLUTE/PATH/TO/sidecar/.venv/bin/python3</string>
+    <string>/REPLACE/WITH/ABSOLUTE/PATH/TO/sidecar/main.py</string>
+  </array>
+
+  <key>WorkingDirectory</key>
+  <!-- Replace with absolute path to sidecar/ directory -->
+  <string>/REPLACE/WITH/ABSOLUTE/PATH/TO/sidecar</string>
+
+  <key>RunAtLoad</key>
+  <true/>
+
+  <key>KeepAlive</key>
+  <true/>
+
+  <key>StandardOutPath</key>
+  <string>/tmp/com.voxtral.dictation.sidecar.out</string>
+
+  <key>StandardErrorPath</key>
+  <string>/tmp/com.voxtral.dictation.sidecar.err</string>
+</dict>
+</plist>

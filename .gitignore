@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+
+# Python
+sidecar/.venv/
+sidecar/__pycache__/
+**/__pycache__/
+*.pyc
+
+# Xcode build output
+VoxtralApp/build/
+*.xcuserstate
+xcuserdata/
+
+# Local Claude Code settings (machine-specific, not project content)
+.claude/
